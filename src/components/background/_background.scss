@@ -1,0 +1,21 @@
+@import '../../styles/abstracts/variables';
+ 
+.bk-header {
+  height: 100vh - 70vh;
+
+  img {
+    height: 105%;
+    @media (max-width: $break-lg) {
+      width: auto;
+      height: 105%;
+    }
+    @media (min-width: $break-xl) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+    height: 100vh - 65vh;
+  }
+ 
+}

@@ -1,0 +1,138 @@
+@import '../../styles/abstracts/variables';
+
+
+.data-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  transform: $translate-y-50;
+  box-shadow: $box-shadow-20;
+  top: 30vh;
+
+
+  .data-card {
+    width: 100%;
+    padding: 2rem 2rem;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 60%;
+      transform: $translate-y-50;
+      border-right: 1px solid $color-light-grey;
+
+      @media (max-width: $break-md - 1) {
+        border-right: none;
+      }
+    }
+
+
+    &:last-child::after {
+      border-right: none;
+    }
+
+    
+    .ip, .location, .timezone, .isp {
+      display: flex;
+      flex-direction: column;
+      height: 80px;
+
+      @media (min-width: $break-lg) and (max-width: $break-xl - 1) {
+        height: 70px;
+      }
+
+      @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+        height: 70px;
+      }
+
+      @media (min-width: $break-xs) and (max-width: $break-md - 1) {
+        height: 50px;
+      }
+
+    }
+
+    .ip > p:first-child, .location > p:first-child, .timezone > p:first-child, .isp > p:first-child {
+      padding-bottom: .6rem;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: $color-light-darker-grey;
+      font-weight: $font-weight-500;
+      letter-spacing: 0.1rem;
+
+      @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+        font-size: .7rem;
+      }
+
+      @media (min-width: $break-xs) and (max-width: $break-md - 1) {
+        padding-bottom: .2rem;
+        font-size: .6rem;
+      }
+
+      @media (min-width: $break-md - 1) and (min-height: 1000px) {
+        font-size: .7rem;
+      }
+
+    }
+
+    .ip > p:last-child, .location > p:last-child, .timezone > p:last-child, .isp > p:last-child {
+      font-size: 1.6rem;
+      font-weight: $font-weight-400;
+      color: $color-very-dark-grey;
+      letter-spacing: 0.02rem;
+
+      @media (min-width: $break-lg) and (max-width: $break-xl - 1) {
+        font-size: 1.4rem;
+      }
+
+      @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+        font-size: 1.1rem;
+      }
+
+      @media (min-width: $break-xs) and (max-width: $break-md - 1) {
+        font-weight: $font-weight-500;
+        font-size: 1.3rem;
+      }
+
+    }
+
+    /* === sdata-card  === */
+    @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+      padding: 2rem 1.5rem;
+    }
+    
+    @media (min-width: $break-xs) and (max-width: $break-md - 1) {
+      padding: 1rem 1.5rem;
+    }
+
+  }
+
+  /* === sdata-card-container  === */
+
+  @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+    top: 35vh;
+  }
+
+  @media (min-width: $break-xs) and (max-width: $break-md - 1) {
+    top: 40vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (min-width: $break-xs) and (max-width: $break-md - 1) and (max-height: 812px) {
+    top: 45vh;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: $break-xs + 1) {
+    top: 45vh;
+  }
+}
