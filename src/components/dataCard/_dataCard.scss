@@ -107,7 +107,7 @@
 
       @media (min-width: $break-xs) and (max-width: $break-md - 1) {
         font-weight: $font-weight-500;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
 
       @media (min-width: $break-xs) and (max-height: 568px) {
@@ -126,11 +126,11 @@
     }
     
     @media (min-width: $break-xs) and (max-width: $break-md - 1) {
-      padding: 1rem 1.5rem;
+      padding: .6rem 1.5rem;
     }
 
     @media (min-width: $break-xs) and (max-height: 568px) {
-      padding: .5rem;
+      padding: .4rem;
     }
 
   }
@@ -147,10 +147,11 @@
     text-align: center;
   }
 
-  @media (min-width: $break-xs) and (max-width: $break-md - 1) and (max-height: 812px) {
-    top: 45vh;
+  @media (min-width: $break-xs) and (max-width: $break-md - 1) and (max-height: 813px) {
+    top: 43vh;
     flex-direction: column;
     text-align: center;
+   
   }
 
   @media (max-width: $break-xs + 1) {
