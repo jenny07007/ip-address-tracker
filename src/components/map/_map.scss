@@ -15,3 +15,9 @@
   bottom: -5px !important;
   left: -55px !important;
 }
+
+@media (max-width: $break-lg) {
+  .leaflet-control {
+    display: none;
+  }
+}

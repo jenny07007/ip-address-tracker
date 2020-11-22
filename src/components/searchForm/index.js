@@ -8,7 +8,7 @@ const SearchForm = () => {
         className="search-input"
         placeholder="Search for any IP address or domain"
       />
-      <div className="search-icon" />
+      <button className="search-icon"></button>
     </form>
   );
 };
