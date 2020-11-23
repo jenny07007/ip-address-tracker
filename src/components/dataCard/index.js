@@ -28,7 +28,7 @@ const DataCard = () => {
       <div className="data-card">
         <div className="timezone">
           <p>timezone</p>
-          <p>UTC{positionReady ? position.location.timezone : "Loading..."}</p>
+          <p>UTC {positionReady ? position.location.timezone : "Loading..."}</p>
         </div>
       </div>
       <div className="data-card">

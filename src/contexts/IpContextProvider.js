@@ -2,13 +2,12 @@ import axios from "axios";
 import { createContext, useState, useEffect, useContext } from "react";
 
 export const IpContext = createContext();
-export const latLngContext = createContext();
-//
+
 export const useIpContext = () => useContext(IpContext);
 
 export const IpContextProvider = ({ children }) => {
   const [position, setPosition] = useState({});
-  const [ip, setIp] = useState("3.9.49.9");
+  const [ip, setIp] = useState("8.8.8.8");
 
   useEffect(() => {
     (async () => {

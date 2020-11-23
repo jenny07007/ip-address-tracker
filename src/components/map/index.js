@@ -9,7 +9,7 @@ const MapComponent = () => {
   const newIcon = L.icon({ iconUrl: Icon, iconAnchor: [23, 56] });
 
   const positionReady = Object.entries(position).length > 0;
-  if (!positionReady) return [51.5074, -0.127758];
+  if (!positionReady) return [];
   const location = [position.location.lat, position.location.lng];
 
   function ModifyMap() {
@@ -33,7 +33,7 @@ const MapComponent = () => {
       <Marker position={location} icon={newIcon}>
         <Popup>
           <p>
-            [ {location[0]}, {location[1]} ]
+            {location[0]}, {location[1]}
           </p>
         </Popup>
       </Marker>
