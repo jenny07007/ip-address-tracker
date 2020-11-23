@@ -7,7 +7,7 @@ const SearchForm = () => {
   const { setPosition } = useIpContext();
   const [ipAddress, setIpAddress] = useState("");
 
-  const handleSumbit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -22,7 +22,7 @@ const SearchForm = () => {
   };
 
   return (
-    <form onSubmit={handleSumbit} className="search-container">
+    <form onSubmit={handleSubmit} className="search-container">
       <input
         type="text"
         className="search-input"

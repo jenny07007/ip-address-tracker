@@ -22,6 +22,7 @@ export const IpContextProvider = ({ children }) => {
         console.log(error);
       }
     })();
+    return () => setIp("");
   }, [ip]);
 
   return (
